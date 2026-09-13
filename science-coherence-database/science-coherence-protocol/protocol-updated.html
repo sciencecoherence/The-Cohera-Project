@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Iboga Master Bioenergetic, Mineral, Dermal & Pharmacology Protocol</title>
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  @page {
+    size: A4;
+    margin: 8mm 8mm 10mm 8mm;
+    background-color: #fcfbf9;
+    @bottom-left {
+      content: "IBOGA MASTER BIOENERGETIC, PHARMACOLOGICAL & INTEGRATION PROTOCOL";
+      font-size: 6.2pt;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #829ab1;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font-size: 6.6pt;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #627d98;
+      font-weight: 700;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #243b53;
+    font-size: 7.2pt;
+    line-height: 1.22;
+    background-color: #fcfbf9;
+  }
+
+  h1, h2, h3, h4 {
+    color: #0b1f36;
+    font-family: "Georgia", serif;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 12.8pt;
+    line-height: 1.15;
+    letter-spacing: -0.2px;
+    margin-bottom: 2px;
+    color: #ffffff;
+  }
+
+  h2 {
+    font-size: 8.6pt;
+    line-height: 1.18;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1.2px;
+    margin-top: 4.5px;
+    margin-bottom: 2px;
+    page-break-after: avoid;
+    color: #0f2d4a;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+  }
+
+  h3 {
+    font-size: 7.4pt;
+    line-height: 1.14;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    page-break-after: avoid;
+    color: #1b4965;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-left: 10px;
+  }
+
+  li {
+    margin-bottom: 0.8px;
+  }
+
+  strong {
+    color: #0b1f36;
+    font-weight: 600;
+  }
+
+  .math {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #0c4a6e;
+  }
+
+  .header-card {
+    background-color: #0d233a;
+    color: #ffffff;
+    padding: 6.5px 9.5px;
+    border-radius: 4px;
+    margin-bottom: 3.5px;
+    border-left: 4px solid #d99b26;
+  }
+
+  .header-card .tagline {
+    font-size: 6.6pt;
+    color: #cbd5e1;
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+  }
+
+  .meta-grid {
+    display: table;
+    width: 100%;
+    margin-top: 2.5px;
+    padding-top: 2px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .meta-col {
+    display: table-cell;
+    font-size: 6pt;
+    color: #9fb3c8;
+    width: 25%;
+  }
+
+  .meta-col strong {
+    color: #f8fafc;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #dbe4ee;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .callout-gold {
+    background-color: #fdfbf7;
+    border-left: 3px solid #d99b26;
+    border-top: 1px solid #f1ece1;
+    border-right: 1px solid #f1ece1;
+    border-bottom: 1px solid #f1ece1;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .callout-blue {
+    background-color: #f4f8fb;
+    border-left: 3px solid #1b4965;
+    border-top: 1px solid #e1ebf2;
+    border-right: 1px solid #e1ebf2;
+    border-bottom: 1px solid #e1ebf2;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .callout-teal {
+    background-color: #f0fdfa;
+    border-left: 3px solid #0d9488;
+    border-top: 1px solid #ccfbf1;
+    border-right: 1px solid #ccfbf1;
+    border-bottom: 1px solid #ccfbf1;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .two-col-table {
+    display: table;
+    width: 100%;
+    margin-bottom: 2px;
+    page-break-inside: avoid;
+  }
+
+  .col-cell {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 2.5px;
+  }
+
+  .col-cell:last-child {
+    padding-right: 0;
+    padding-left: 2.5px;
+  }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2px;
+    margin-bottom: 2.5px;
+    font-size: 6.45pt;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid #cbd5e1;
+    page-break-inside: avoid;
+  }
+
+  table.data-table th {
+    background-color: #0f2d4a;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 2px 3.2px;
+    font-size: 6.3pt;
+    letter-spacing: 0.15px;
+  }
+
+  table.data-table td {
+    padding: 1.6px 3.2px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #243b53;
+    vertical-align: top;
+    line-height: 1.12;
+  }
+
+  table.data-table tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+
+  table.data-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2px;
+    margin-bottom: 2.5px;
+    font-size: 6.45pt;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 3px;
+    page-break-inside: avoid;
+  }
+
+  .timeline-table th {
+    background-color: #0f2d4a;
+    color: #ffffff;
+    padding: 2px 3.2px;
+    text-align: left;
+    font-size: 6.2pt;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+  }
+
+  .timeline-table td {
+    padding: 2px 3.2px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+    line-height: 1.12;
+  }
+
+  .timeline-table tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 2.2px;
+    border-radius: 2px;
+    font-size: 5.6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    margin-bottom: 1px;
+  }
+
+  .badge-prime { background-color: #e0f2fe; color: #0369a1; }
+  .badge-clear { background-color: #fef3c7; color: #92400e; }
+  .badge-fast { background-color: #fee2e2; color: #b91c1c; }
+  .badge-flood { background-color: #1e1b4b; color: #e0e7ff; }
+  .badge-rec { background-color: #ecfdf5; color: #065f46; }
+  .badge-keto { background-color: #f3e8ff; color: #6b21a8; }
+
+  .page-container {
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page-container">
+    <div class="header-card">
+      <h1>Iboga Master Bioenergetic, Mineral & Dermal Protocol</h1>
+      <div class="tagline">50/50 Pelagic Finfish & Cephalopod Matrix + 2 Dozen Oysters/Wk, Betaine/Choline Axis, Supplement Synergies & Keto Integration</div>
+      <div class="meta-grid">
+        <div class="meta-col"><strong>Dietary Matrix:</strong> Fish + Cephalopods + Oysters</div>
+        <div class="meta-col"><strong>Osmolytes & Zinc:</strong> Betaine, Taurine, 50–90mg Zn</div>
+        <div class="meta-col"><strong>Electrophysiology:</strong> hERG / QTc Shielding</div>
+        <div class="meta-col"><strong>Synergies:</strong> ECM, Redox & GDNF Axes</div>
+      </div>
+    </div>
+
+    <h2>1. Master Protocol Architecture & Schedule</h2>
+    <p>
+      This protocol coordinates nutrient timing, complete mineral, choline, betaine, and glycine bioavailability, gastric transit kinetics, cardiac electrophysiology, and neuroplastic signaling across a structured multi-phase timeline:
+    </p>
+
+    <table class="timeline-table">
+      <thead>
+        <tr>
+          <th style="width: 13%;">Phase / Days</th>
+          <th style="width: 25%;">Nutritional Baseline</th>
+          <th style="width: 28%;">Sleep & Dermal Rejuvenation Stack</th>
+          <th style="width: 34%;">Active Bioactive & Supplement Protocols</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-prime">Phase 1</span><br><strong>Days -7 to -4</strong><br><em>Priming & Rejuvenation</em></td>
+          <td>3–4 lbs 50/50 mix: Finfish (Lisa, Wahoo, Bonito, Barracuda) + Cephalopods (Squid/Octopus) + raw oysters (2 doz/wk) + raw pork fat + coconut water.</td>
+          <td><strong>Bedtime Snack:</strong> Buffalo Griego + raw honey + sliced kiwi.<br><strong>Dermal:</strong> White Jelly Mushroom + Injuv.</td>
+          <td><strong>Morning:</strong> Nigella Sativa (5% Thymoquinone).<br><strong>Evening:</strong> Tauromag (full dose) + Lemon Balm + Ecklonia Cava.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-clear">Phase 2</span><br><strong>Days -3 to -2</strong><br><em>Clearance Phase</em></td>
+          <td><strong>Exclusively 50/50 raw marine mix</strong> (3–4 lbs) + fresh coconut water. <em>Drop pork, dairy, honey, kiwi, and oysters.</em></td>
+          <td>No evening dairy or heavy sugars. Cut fluids 2h before sleep.</td>
+          <td><strong>Evening:</strong> Tauromag (full dose) only.<br><em><strong>PAUSE:</strong> Lemon Balm, Ecklonia, Nigella Sativa, White Jelly & Injuv.</em></td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-fast">Phase 3</span><br><strong>Day -1</strong><br><em>24h Hydration Fast</em></td>
+          <td><strong>Total solid food fast.</strong> Sip 1.0–1.5 L fresh coconut water across day for steady <span class="math">K<sup>+</sup></span> & glycogen.</td>
+          <td>Hydration only until 3h prior to sleep. Total digestive rest.</td>
+          <td><strong>Evening:</strong> Tauromag (full dose) with a light sip of coconut water.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-flood">Phase 4</span><br><strong>Day 0</strong><br><em>Ceremony Night</em></td>
+          <td><strong>Absolute fast.</strong> Zero solid food, zero supplements, zero fluids to eliminate emetic aspiration hazards.</td>
+          <td>Active visionary flood. Neutral stomach pH for unhindered alkaloid absorption.</td>
+          <td><strong>Zero supplements.</strong> Absolute fast during active medicine work.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-rec">Phase 5</span><br><strong>Days +1 to +2</strong><br><em>Acute Recovery</em></td>
+          <td><strong>Day +1:</strong> Coconut water only &rarr; light raw white fish in evening.<br><strong>Day +2:</strong> Return to 3–4 lbs 50/50 marine mix.</td>
+          <td>Restorative slow-wave sleep recovery.<br><strong>Resume Night +2:</strong> Dermal Stack (White Jelly + Injuv).</td>
+          <td><strong>Night +1:</strong> Tauromag only.<br><strong>Night +2:</strong> Tauromag + Lemon Balm + Ecklonia Cava.<br><strong>Day +2 Morning:</strong> Resume Nigella Sativa.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-keto">Phase 6</span><br><strong>Days +3 to +7+</strong><br><em>Keto Integration</em></td>
+          <td><strong>50g Net Carb Keto:</strong> 3–4 lbs 50/50 raw marine mix + raw oysters (2 doz/wk) + 500–750 ml coconut water (~18–27g net carbs).</td>
+          <td>Full restorative sleep stack + Dermal Hydration Stack (White Jelly + Injuv).</td>
+          <td><strong>Morning (Days +5 to +7):</strong> Introduce Eurycomax & Tribugen (half-dose) + Nigella Sativa.<br><strong>Evening:</strong> Tauromag + Lemon Balm + Ecklonia.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. Biochemical & Nutritional Profile: Finfish, Cephalopods & Oysters (3–4 lbs Daily)</h2>
+    <p>
+      Consuming 3 to 4 lbs (~1.4–1.8 kg) of unheated marine flesh split between pelagic finfish (Lisa, Wahoo, Bonito, Barracuda), cephalopods (Squid, Octopus), and raw oysters supplies clinical-grade osmolytes, intact coenzyme pools, and cellular energy substrates without thermal denaturation:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 24%;">Biomarker / Nutrient</th>
+          <th style="width: 17%;">Estimated Daily Yield</th>
+          <th style="width: 59%;">Mechanistic Function in Iboga Preparation & Recovery</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Direct Pre-Formed Betaine (TMG)</strong></td>
+          <td><strong>2,700 – 4,800 mg</strong> (2.7–4.8 g)</td>
+          <td>Direct methyl donor for hepatic <strong>BHMT</strong> homocysteine remethylation independent of folate/<span class="math">B_{12}</span>; powerful renal medullary osmoprotectant against high urea throughput.</td>
+        </tr>
+        <tr>
+          <td><strong>Natural Taurine</strong></td>
+          <td><strong>4,300 – 8,000 mg</strong> (4.3–8.0 g)</td>
+          <td>Concentrated in cephalopod mantle, Bonito red muscle, and oyster liquor; regulates <span class="math">Ca<sup>2+</sup></span> flux, retains myocardial potassium (<span class="math">K<sup>+</sup></span>), and prevents hERG channel blockade arrhythmias.</td>
+        </tr>
+        <tr>
+          <td><strong>Natural Glycine</strong></td>
+          <td><strong>17 – 27 g</strong> (17,000–27,000 mg)</td>
+          <td>Derived from squid/octopus sheaths and bivalves; rate-limiting substrate for Glutathione (<span class="math">\text{GSH}</span>) synthesis; co-agonist at NMDA glycine sites (<span class="math">GluN1</span>); drives collagen/ECM repair.</td>
+        </tr>
+        <tr>
+          <td><strong>Natural Choline (PC & Free)</strong></td>
+          <td><strong>1,400 – 2,700 mg</strong> (1.4–2.7 g)</td>
+          <td>Direct precursor for acetylcholine synthesis, stabilizing the <span class="math">\alpha_3\beta_4</span> nicotinic baseline; provides phosphatidylcholine for neuronal membrane repair and hepatic Phase II VLDL clearance.</td>
+        </tr>
+        <tr>
+          <td><strong>Natural Creatine</strong></td>
+          <td><strong>5.0 – 8.5 g</strong></td>
+          <td>Supplied by fast-twitch pelagic muscle (Wahoo, Bonito, Barracuda); saturates cerebral phosphocreatine (<span class="math">PCr</span>) reserves for cortical ATP buffering.</td>
+        </tr>
+        <tr>
+          <td><strong>Dietary Potassium (<span class="math">K<sup>+</sup></span>)</strong></td>
+          <td><strong>5,300 – 8,400 mg</strong></td>
+          <td>Establishes high-normal serum potassium, which directly increases outward repolarization driving force and counteracts drug-induced QTc prolongation.</td>
+        </tr>
+        <tr>
+          <td><strong>Dietary Magnesium (<span class="math">Mg<sup>2+</sup></span>)</strong></td>
+          <td><strong>480 – 760 mg</strong></td>
+          <td>Synergizes with Tauromag to elevate central seizure thresholds, block pathological NMDA hyper-excitation, and stabilize cardiac resting membrane potential.</td>
+        </tr>
+        <tr>
+          <td><strong>Marine Omega-3s (EPA/DHA)</strong></td>
+          <td><strong>13 – 29 g</strong></td>
+          <td>Maintains biophysical membrane fluidity, modulates lipid raft architecture, attenuates neuroinflammation, and supports post-flood dendritogenesis.</td>
+        </tr>
+        <tr>
+          <td><strong>Bioavailable Protein</strong></td>
+          <td><strong>280 – 380 g</strong></td>
+          <td>Supplies the complete amino acid substrate pool for hepatic Phase II conjugation pathways, collagen synthesis, and neurotransmitter regeneration.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page-container">
+    <h2>3. Whole-Food B-Vitamer Matrix vs. Synthetic Isolates</h2>
+    <p>
+      The complete marine matrix supplies B-vitamins in their native coenzyme states bound to peptides, carrier proteins, and mineral cofactors, preventing the sudden monoamine surges, peripheral flushing, or methyl-donor overload associated with synthetic isolates:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 24%;">Vitamer Class</th>
+          <th style="width: 19%;">Yield (3–4 lbs Marine Mix)</th>
+          <th style="width: 25%;">Native Coenzyme Forms</th>
+          <th style="width: 32%;">Electrophysiological & Neurological Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vitamin B<sub>12</sub> (Cobalamin)</strong></td>
+          <td><strong>90 – 250 mcg</strong> (3,750–10,400% DV)</td>
+          <td>Adenosylcobalamin, Methylcobalamin</td>
+          <td>Extreme yield from Octopus and Oysters; preserves axonal myelin sheath integrity, supports mitochondrial mutase, and drives one-carbon methylation.</td>
+        </tr>
+        <tr>
+          <td><strong>Vitamin B<sub>3</sub> (Niacin)</strong></td>
+          <td><strong>130 – 200 mg</strong> (810–1,250% DV)</td>
+          <td>NAD<sup>+</sup>, NADH, NADP<sup>+</sup></td>
+          <td>Direct precursor from Bonito/Wahoo red muscle, fueling high-turnover cerebral ATP synthesis during visionary processing.</td>
+        </tr>
+        <tr>
+          <td><strong>Vitamin B<sub>6</sub> (Pyridoxine)</strong></td>
+          <td><strong>9 – 16 mg</strong> (560–1,000% DV)</td>
+          <td>Pyridoxal-5'-Phosphate (P-5-P)</td>
+          <td>Essential enzymatic cofactor for aromatic L-amino acid decarboxylase (Tryptophan &rarr; Serotonin, Glutamate &rarr; GABA).</td>
+        </tr>
+        <tr>
+          <td><strong>Vitamin B<sub>2</sub> (Riboflavin)</strong></td>
+          <td><strong>3.8 – 8.0 mg</strong> (290–615% DV)</td>
+          <td>FMN, FAD (Flavoproteins)</td>
+          <td>Cofactor for glutathione reductase, preserving neuronal redox balance against oxidative stress during metabolic recalibration.</td>
+        </tr>
+        <tr>
+          <td><strong>Vitamin B<sub>5</sub> (Pantothenic Acid)</strong></td>
+          <td><strong>13 – 25 mg</strong> (260–500% DV)</td>
+          <td>Coenzyme A (CoA), Phosphopantetheine</td>
+          <td>Catalyzes fatty acid beta-oxidation and drives choline acetyltransferase for central acetylcholine synthesis.</td>
+        </tr>
+        <tr>
+          <td><strong>Vitamin B<sub>1</sub> (Thiamine)</strong></td>
+          <td><strong>2.0 – 4.5 mg</strong> (160–375% DV)</td>
+          <td>Thiamine Pyrophosphate (TPP)</td>
+          <td>Directs neuronal pyruvate dehydrogenase activity and stabilizes peripheral axonal conduction velocities.</td>
+        </tr>
+        <tr>
+          <td><strong>Vitamin B<sub>9</sub> (Folate)</strong></td>
+          <td><strong>350 – 750 mcg</strong> (90–190% DV)</td>
+          <td>Tetrahydrofolate, 5-MTHF polyglutamates</td>
+          <td>Oyster- and cephalopod-enriched pool fueling purine/pyrimidine synthesis and neural chromatin remodeling during GDNF neurogenesis.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Extended Marine Mineral & Trace Element Matrix (3–4 lbs Daily)</h2>
+    <p>
+      Combining predatory pelagics, cephalopods, and raw oysters provides an unmatched spectrum of organic chelated trace elements, avoiding synthetic mineral competition:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 22%;">Mineral Element</th>
+          <th style="width: 18%;">Yield (3–4 lbs Marine Mix)</th>
+          <th style="width: 24%;">Native Biological Matrix</th>
+          <th style="width: 36%;">Electrophysiological & Enzymatic Role in Iboga Protocol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Zinc (<span class="math">Zn<sup>2+</sup></span>)</strong></td>
+          <td><strong>50 – 90 mg</strong> (450–820% DV)</td>
+          <td><strong>Raw Oysters</strong>, Squid & Barracuda</td>
+          <td>Major allosteric NMDA receptor modulator (prevents excitotoxicity), drives CYP450 enzymes, and fuels post-flood testosterone/dendritic repair.</td>
+        </tr>
+        <tr>
+          <td><strong>Copper (<span class="math">Cu<sup>2+</sup></span>)</strong></td>
+          <td><strong>5.5 – 11.0 mg</strong> (610–1,220% DV)</td>
+          <td><strong>Hemocyanin</strong> in Cephalopods & Oysters</td>
+          <td>Essential cofactor for dopamine $\beta$-hydroxylase (catecholamine synthesis), SOD1, and lysyl oxidase (dermal collagen crosslinking).</td>
+        </tr>
+        <tr>
+          <td><strong>Selenium (<span class="math">Se</span>) & Selenoneine</strong></td>
+          <td><strong>480 – 1,000 mcg</strong> (870–1,820% DV)</td>
+          <td>Selenoneine in Bonito, Cephalopods & Oysters</td>
+          <td>Essential catalytic core for Glutathione Peroxidase (<span class="math">GPx</span>); actively binds methylmercury into inert HgSe and protects cerebral lipids.</td>
+        </tr>
+        <tr>
+          <td><strong>Heme & Chelate Iron (<span class="math">Fe<sup>2+</sup></span>)</strong></td>
+          <td><strong>28 – 50 mg</strong> (155–280% DV)</td>
+          <td>Bonito red muscle (*chiai*), Octopus & Oysters</td>
+          <td>Direct catalytic cofactor for hepatic <strong>CYP2D6</strong> (driving ibogaine &rarr; noribogaine conversion) and mitochondrial cytochrome c oxidase.</td>
+        </tr>
+        <tr>
+          <td><strong>Phosphorus (<span class="math">P</span>)</strong></td>
+          <td><strong>3,600 – 5,700 mg</strong> (275–455% DV)</td>
+          <td>Phospholipids, Phosphoproteins</td>
+          <td>Primary constituent of neuronal phospholipid bilayers and adenosine triphosphate (<span class="math">\text{ATP}</span>) / phosphocreatine high-energy bonds.</td>
+        </tr>
+        <tr>
+          <td><strong>Iodine (<span class="math">I^-</span>)</strong></td>
+          <td><strong>280 – 800 mcg</strong> (185–530% DV)</td>
+          <td>Organic marine iodides/peptides</td>
+          <td>Substrate for thyroid hormones (<span class="math">T_3/T_4</span>), setting basal metabolic rate, mitochondrial biogenesis, and neuroplastic protein synthesis.</td>
+        </tr>
+        <tr>
+          <td><strong>Calcium (<span class="math">Ca<sup>2+</sup></span>)</strong></td>
+          <td><strong>400 – 850 mg</strong> (35–70% DV)</td>
+          <td>Marine organo-calcium complex</td>
+          <td>Balanced with magnesium and taurine to ensure steady cardiac action potential plateaus without intracellular calcium overload.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. Cardiac Electrophysiology & Pharmacokinetic Dynamics</h2>
+
+    <div class="two-col-table">
+      <div class="col-cell">
+        <div class="callout-blue">
+          <h3 style="margin-top:0; color:#0f2d4a;">The hERG (I<sub>Kr</sub>) Blockade & QTc Dynamics</h3>
+          <p style="font-size:7.2pt; margin-bottom:2px;">
+            Ibogaine and active metabolite <strong>noribogaine</strong> act as potent blockers of the human ether-à-go-go-related gene (<strong>hERG / <span class="math">I<sub>Kr</sub></span></strong>) voltage-gated potassium channel in cardiac myocytes, delaying Phase 3 repolarization and prolonging the <strong>QTc interval</strong>.
+          </p>
+          <p style="font-size:7.2pt; margin-bottom:0;">
+            <strong>Potassium Loading Shield:</strong> High-normal serum potassium (<span class="math">K<sup>+</sup> &gt; 4.5\text{ mEq/L}</span>) via fresh coconut water and raw fish enhances outward repolarizing currents and physically impedes noribogaine binding within the hERG channel pore.
+          </p>
+        </div>
+      </div>
+      <div class="col-cell">
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">Tauromag: Myocardial Membrane Shield</h3>
+          <p style="font-size:7.2pt; margin-bottom:2px;">
+            <strong>Magnesium Acetyl-taurate / Taurate</strong> provides direct myocardial and central protection when administered in the evening:
+          </p>
+          <ul style="font-size:7.1pt; margin-bottom:0; padding-left:11px;">
+            <li><strong>Magnesium (<span class="math">Mg<sup>2+</sup></span>):</strong> Acts as a physiological calcium antagonist, stabilizing resting potential and blocking Early Afterdepolarizations (EADs) to prevent Torsades de Pointes.</li>
+            <li><strong>Taurine:</strong> Regulates the <span class="math">Na<sup>+</sup>\text{-}Ca<sup>2+</sup></span> exchanger (NCX), preventing intracellular calcium overload and safeguarding myocardial potassium retention.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <div class="page-container">
+    <h2>6. Gastric Motility & 24h Fasting Kinetics</h2>
+    <p>
+      Iboga alkaloids stimulate central emesis via the <strong>chemoreceptor trigger zone (CTZ)</strong> and vestibular pathways. Raw marine flesh and squid mantle clear the stomach within <strong>2 to 3 hours</strong> (vs. 12–24h for pork/dairy). The <strong>24-Hour Coconut Water Fast (Day -1)</strong> completely empties upper duodenal chyme while supplying 40–50g natural monosaccharides to spare glycogen without placing metabolic or digestive strain on the liver and pancreas.
+    </p>
+
+    <h2>7. Detailed Supplement Pharmacology, Benefits & Synergies</h2>
+
+    <div class="two-col-table">
+      <div class="col-cell">
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">Tauromag® (Magnesium N-Acetyltaurate / ATA Mg®)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Lipophilic BBB Penetration:</strong> Crosses blood-brain barrier via organic anion/amino acid pathways. Blocks NMDA channel pore, quells kainic acid excitotoxicity and photophobia, and shields cardiac myocytes via NCX regulation against hERG arrhythmias.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">Lemon Balm (*Melissa officinalis*)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>GABA-T Inhibition & Nicotinic Binding:</strong> Standardized to rosmarinic acid. Inhibits GABA transaminase to elevate synaptic GABA. Possesses affinity for muscarinic/nicotinic receptors. <em>Pause Days -3 to -1 to clear &alpha;<sub>3</sub>&beta;<sub>4</sub> receptors; resume Night +2.</em>
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">Ecklonia Cava Extract (Dieckol / Phlorotannins)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Deep Non-REM Sleep & Polyphenol Power:</strong> 8-ring phlorotannin matrix (10-100x antioxidant power of EGCG). Allosteric modulator at GABA<sub>A</sub>-BZD site extending slow-wave delta sleep. Mild ACE inhibition improves cerebral perfusion.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">Nigella Sativa Extract (5% Thymoquinone)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Nrf2/HO-1 & Microglial Quenching:</strong> Thymoquinone crosses BBB to upregulate heme oxygenase-1 and glutathione. Inhibits NF-&kappa;B, suppressing microglia-mediated cytokines. Mild GABA<sub>A</sub> and &mu;-opioid tone stabilization.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-cell">
+        <div class="callout-teal">
+          <h3 style="margin-top:0; color:#0f2d4a;">White Jelly Mushroom (*Tremella fuciformis*)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Glucuronoxylomannans (500x Water Capacity):</strong> Acidic heteropolysaccharides create deep dermal hydration mesh. Upregulates cellular SOD/GPx in fibroblasts, stimulates Type I collagen mRNA, and promotes NGF neurite outgrowth.
+          </p>
+        </div>
+        <div class="callout-teal">
+          <h3 style="margin-top:0; color:#0f2d4a;">Injuv® (Cleaved Low-MW Hyaluronic Acid)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>CD44 Receptor Fibroblast Trigger:</strong> Enzymatically cleaved (~5k–50k Da) HA fragments cross gut barrier, binding CD44 receptors to stimulate *de novo* endogenous high-MW HA, collagen, and elastin synthesis across dermis and fascia.
+          </p>
+        </div>
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">Eurycomax (Tongkat Ali / Eurycomanone)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>HPA Axis Regulation & Free Testosterone:</strong> Downregulates post-ceremony cortisol, unbinds testosterone from SHBG, and accelerates skeletal ATP synthesis. *Strictly delay to Day +5 to +7 to protect dopamine/autonomic baseline.*
+          </p>
+        </div>
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">Tribugen (High-Protodioscin Complex)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Androgen Receptor Density & Dopaminergic Tone:</strong> Protodioscin upregulates central AR expression, boosts nitric oxide, and restores dopamine drive during the GDNF window. *Introduce Day +5 to +7 at half-dose.*
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>8. Post-Flood Ketogenic Integration & GDNF Window</h2>
+    <div class="callout-gold">
+      <p style="font-size:7pt; margin-bottom:0;">
+        <strong>The Noribogaine-GDNF Axis:</strong> Noribogaine triggers sustained upregulation of <strong>Glial Cell-Derived Neurotrophic Factor (GDNF)</strong> and <strong>BDNF</strong> in the ventral tegmental area (VTA), driving multi-week synaptic plasticity, dopamine transporter (DAT) reset, and D<sub>2</sub> receptor sensitization. <strong>50g Net-Carb Ketosis</strong> supplies &beta;HB to fuel mitochondrial respiration and inhibit class I HDACs, while coconut water maintains cardiac potassium reserves.
+      </p>
+    </div>
+
+    <div class="callout-blue" style="margin-top: 2.5px;">
+      <h3 style="margin-top:0; color:#0f2d4a;">Master Protocol Quick-Reference Rules</h3>
+      <ul style="font-size:6.9pt; margin-bottom:0; padding-left:10px;">
+        <li><strong>Rule 1 (Electrophysiology):</strong> Maintain high-normal serum K<sup>+</sup> and Mg<sup>2+</sup> saturation via raw marine food, coconut water, and evening Tauromag to protect the hERG channel.</li>
+        <li><strong>Rule 2 (GI Clearance & Fast):</strong> Transition to 100% raw marine food on Days -3 to -2, followed by the 24h pure coconut water fast on Day -1 to prevent emetic choking and gastric distress.</li>
+        <li><strong>Rule 3 (Receptor Cleanliness):</strong> Pause Lemon Balm, Ecklonia, Nigella Sativa, White Jelly, and Injuv 3 days prior; resume on Day +2 / Night +2.</li>
+        <li><strong>Rule 4 (Patience on Stimulants):</strong> Hold off on Eurycomax & Tribugen until Days +5 to +7 to safeguard the dopamine reset.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nigella Sativa 5% Master Pharmacological, Neuromodulatory & Clinical Monograph</title>
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  @page {
+    size: A4;
+    margin: 8mm 8mm 10mm 8mm;
+    background-color: #fcfbf9;
+    @bottom-left {
+      content: "NOOTROPICS DEPOT NIGELLA SATIVA 5% EXTRACT — MASTER PHARMACOLOGICAL DOSSIER";
+      font-size: 6.2pt;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #829ab1;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font-size: 6.6pt;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #627d98;
+      font-weight: 700;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #243b53;
+    font-size: 7.2pt;
+    line-height: 1.22;
+    background-color: #fcfbf9;
+  }
+
+  h1, h2, h3, h4 {
+    color: #0b1f36;
+    font-family: "Georgia", serif;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 12.8pt;
+    line-height: 1.15;
+    letter-spacing: -0.2px;
+    margin-bottom: 2px;
+    color: #ffffff;
+  }
+
+  h2 {
+    font-size: 8.6pt;
+    line-height: 1.18;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1.2px;
+    margin-top: 4.5px;
+    margin-bottom: 2px;
+    page-break-after: avoid;
+    color: #0f2d4a;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+  }
+
+  h3 {
+    font-size: 7.4pt;
+    line-height: 1.14;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    page-break-after: avoid;
+    color: #1b4965;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-left: 10px;
+  }
+
+  li {
+    margin-bottom: 0.8px;
+  }
+
+  strong {
+    color: #0b1f36;
+    font-weight: 600;
+  }
+
+  .math {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #0c4a6e;
+  }
+
+  .header-card {
+    background-color: #0d233a;
+    color: #ffffff;
+    padding: 6.5px 9.5px;
+    border-radius: 4px;
+    margin-bottom: 3.5px;
+    border-left: 4px solid #d99b26;
+  }
+
+  .header-card .tagline {
+    font-size: 6.6pt;
+    color: #cbd5e1;
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+  }
+
+  .meta-grid {
+    display: table;
+    width: 100%;
+    margin-top: 2.5px;
+    padding-top: 2px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .meta-col {
+    display: table-cell;
+    font-size: 6pt;
+    color: #9fb3c8;
+    width: 25%;
+  }
+
+  .meta-col strong {
+    color: #f8fafc;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #dbe4ee;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .callout-gold {
+    background-color: #fdfbf7;
+    border-left: 3px solid #d99b26;
+    border-top: 1px solid #f1ece1;
+    border-right: 1px solid #f1ece1;
+    border-bottom: 1px solid #f1ece1;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .callout-blue {
+    background-color: #f4f8fb;
+    border-left: 3px solid #1b4965;
+    border-top: 1px solid #e1ebf2;
+    border-right: 1px solid #e1ebf2;
+    border-bottom: 1px solid #e1ebf2;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .callout-teal {
+    background-color: #f0fdfa;
+    border-left: 3px solid #0d9488;
+    border-top: 1px solid #ccfbf1;
+    border-right: 1px solid #ccfbf1;
+    border-bottom: 1px solid #ccfbf1;
+    border-radius: 3px;
+    padding: 3.5px 5.5px;
+    margin-bottom: 2.5px;
+    page-break-inside: avoid;
+  }
+
+  .two-col-table {
+    display: table;
+    width: 100%;
+    margin-bottom: 2px;
+    page-break-inside: avoid;
+  }
+
+  .col-cell {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 2.5px;
+  }
+
+  .col-cell:last-child {
+    padding-right: 0;
+    padding-left: 2.5px;
+  }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2px;
+    margin-bottom: 2.5px;
+    font-size: 6.45pt;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid #cbd5e1;
+    page-break-inside: avoid;
+  }
+
+  table.data-table th {
+    background-color: #0f2d4a;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 2px 3.2px;
+    font-size: 6.3pt;
+    letter-spacing: 0.15px;
+  }
+
+  table.data-table td {
+    padding: 1.6px 3.2px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #243b53;
+    vertical-align: top;
+    line-height: 1.12;
+  }
+
+  table.data-table tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+
+  table.data-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 2.2px;
+    border-radius: 2px;
+    font-size: 5.6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    margin-bottom: 1px;
+  }
+
+  .badge-prime { background-color: #e0f2fe; color: #0369a1; }
+  .badge-clear { background-color: #fef3c7; color: #92400e; }
+  .badge-fast  { background-color: #fee2e2; color: #b91c1c; }
+  .badge-flood { background-color: #1e1b4b; color: #e0e7ff; }
+  .badge-rec   { background-color: #ecfdf5; color: #065f46; }
+  .badge-keto  { background-color: #f3e8ff; color: #6b21a8; }
+
+  .page-container {
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page-container">
+    <div class="header-card">
+      <h1>Nigella Sativa 5% Extract Monograph</h1>
+      <div class="tagline">Standardized Full-Spectrum Matrix (≥5% Thymoquinone), AChE Inhibition, GABA<sub>A</sub> Allosteric Modulation & Systemic Cytokine Quenching</div>
+      <div class="meta-grid">
+        <div class="meta-col"><strong>Botanical Source:</strong> <em>Nigella sativa</em> (Ranunculaceae)</div>
+        <div class="meta-col"><strong>Standardization:</strong> ≥5.0% Thymoquinone (HPLC)</div>
+        <div class="meta-col"><strong>Primary Yield:</strong> 10 mg Active TQ / 200 mg Dose</div>
+        <div class="meta-col"><strong>Bioactive Matrix:</strong> THQ, Nigellone, Carvacrol, Sterols</div>
+      </div>
+    </div>
+
+    <h2>1. Botanical Identity, Extraction Integrity & Standardization Profile</h2>
+    <p>
+      <strong>Nigella sativa</strong> (Black Seed or Black Cumin) is a celebrated botanical across Mediterranean, Ayurvedic, and Unani pharmacopeias (*Habbat al-Barakah*). Crude, unstandardized cold-pressed black seed oils exhibit extreme variance (&lt;0.5% to 1.5% Thymoquinone) and rapid auto-oxidation. Nootropics Depot’s <strong>Nigella Sativa 5% Extract</strong> utilizes supercritical CO<sub>2</sub> extraction and HPLC/GC-MS verification to deliver a guaranteed baseline of <strong>≥5.0% Thymoquinone (TQ)</strong> alongside a preserved native lipid and terpene entourage:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 22%;">Bioactive Fraction</th>
+          <th style="width: 18%;">Standardization / Yield</th>
+          <th style="width: 25%;">Chemical Classification</th>
+          <th style="width: 35%;">Primary Biological & Neurochemical Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Thymoquinone (TQ)</strong></td>
+          <td><strong>≥ 5.0%</strong> (10 mg / 200 mg)</td>
+          <td>Monomeric Quinone Derivative</td>
+          <td>Potent Nrf2 activator, NF-&kappa;B blunter, Class I/II HDAC inhibitor, and microglial cytoprotectant.</td>
+        </tr>
+        <tr>
+          <td><strong>Thymohydroquinone (THQ)</strong></td>
+          <td>Native Standardized Ratio</td>
+          <td>Reduced Hydroquinone Derivative</td>
+          <td>One of nature's strongest natural Acetylcholinesterase (<span class="math">\text{AChE}</span>) inhibitors; drives synaptic acetylcholine retention.</td>
+        </tr>
+        <tr>
+          <td><strong>Dithymoquinone (Nigellone)</strong></td>
+          <td>Native Carbonyl Complex</td>
+          <td>Dimeric Carbonyl Polymer</td>
+          <td>Stabilizes mast cell membranes against calcium flux; suppresses histamine release and dilates bronchial smooth muscle.</td>
+        </tr>
+        <tr>
+          <td><strong>Auxiliary Terpenes</strong></td>
+          <td>Natural Full-Spectrum Matrix</td>
+          <td>Carvacrol, <em>p</em>-Cymene, 4-Terpineol</td>
+          <td>Enhances cell membrane fluidity and micellar intestinal permeability; exerts selective antimicrobial dynamics.</td>
+        </tr>
+        <tr>
+          <td><strong>Lipid & Sterol Scaffolding</strong></td>
+          <td>Native Lipid Matrix</td>
+          <td>Oleic (18:1), Linoleic (18:2), &beta;-Sitosterol</td>
+          <td>Buffers volatile terpenes against gastric mucosa, prevents "black seed reflux," and assists intestinal lymphatic uptake.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. Molecular Mechanisms of Action & Intracellular Cascades</h2>
+    <p>
+      Nigella Sativa acts as a pleiotropic neuromodulator, immune sentinel, and metabolic regulator across six core biological systems:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 20%;">Target System</th>
+          <th style="width: 35%;">Molecular Mechanism of Action</th>
+          <th style="width: 45%;">Functional & Systemic Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cholinergic Neurotransmission</strong></td>
+          <td>Potent reversible inhibition of Acetylcholinesterase (<span class="math">\text{AChE}</span>) mediated by THQ and TQ.</td>
+          <td>Suppresses ACh breakdown; upregulates central <span class="math">\alpha7\text{ nAChR}</span> and <span class="math">M_1</span> muscarinic transmission to drive Long-Term Potentiation (<span class="math">\text{LTP}</span>).</td>
+        </tr>
+        <tr>
+          <td><strong>GABAergic Axis & Anxiolysis</strong></td>
+          <td>Positive allosteric modulation (<span class="math">\text{PAM}</span>) at <span class="math">\text{GABA}_\text{A}</span> receptor complexes; boosts central GABA tone.</td>
+          <td>Offsets cholinergic excitation; lowers resting heart rate, clears somatic muscle tightness, and eliminates adrenaline spikes.</td>
+        </tr>
+        <tr>
+          <td><strong>Inflammatory Cascade</strong></td>
+          <td>Suppresses <span class="math">\text{I}\kappa\text{B}\alpha</span> phosphorylation; downregulates <span class="math">\text{NF-}\kappa\text{B}</span>, <span class="math">\text{COX-2}</span>, <span class="math">\text{5-LOX}</span>, and <span class="math">\text{NLRP3}</span>.</td>
+          <td>Quenches systemic <span class="math">\text{TNF-}\alpha}</span>, <span class="math">\text{IL-1}\beta</span>, and <span class="math">\text{IL-6}</span>; eliminates joint stiffness and neuro-inflammatory microglial activation.</td>
+        </tr>
+        <tr>
+          <td><strong>Redox & Epigenetics</strong></td>
+          <td>Translocation of <span class="math">\text{Nrf2/ARE}</span>; upregulates <span class="math">\text{HO-1}</span>, <span class="math">\text{GST}</span>, <span class="math">\text{NQO1}</span>; mild <span class="math">\text{HDAC}</span> attenuation.</td>
+          <td>Expands endogenous Glutathione pools, prevents oxidative DNA strand breakage, and supports mitochondrial integrity.</td>
+        </tr>
+        <tr>
+          <td><strong>Pulmonary & Mast Cells</strong></td>
+          <td>Stabilizes mast cell membranes; prevents intracellular calcium-dependent histamine degranulation.</td>
+          <td>Functions as a natural bronchodilator; clears upper airway resistance and mitigates seasonal allergic rhinitis.</td>
+        </tr>
+        <tr>
+          <td><strong>Metabolic Partitioning</strong></td>
+          <td>Enhances <span class="math">\text{AMPK}</span> phosphorylation; stimulates <span class="math">\text{PPAR-}\gamma</span> co-activators and muscle <span class="math">\text{GLUT4}</span>.</td>
+          <td>Supports insulin sensitivity, promotes fatty acid oxidation, enhances hepatic bile flow, and shields gut tight junctions (<span class="math">\text{ZO-1}</span>).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. The 5% vs. 10% Standardization Profile Comparison</h2>
+    <div class="two-col-table">
+      <div class="col-cell">
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">Nigella Sativa 5% Extract (The Daily Driver)</h3>
+          <ul style="font-size:7pt; margin-bottom:0; padding-left:11px;">
+            <li><strong>Yield:</strong> 10 mg Active Thymoquinone per 200 mg serving.</li>
+            <li><strong>Gastric Tolerability:</strong> High; intact fatty acid matrix coats gastric lining, preventing throat burn and aromatic reflux.</li>
+            <li><strong>Subjective Tone:</strong> Smooth, sustained "Zen" focus and physical tranquility without midday lethargy.</li>
+            <li><strong>Application:</strong> Daily baseline optimization for cognition, joint ease, allergy resistance, and REM sleep architecture.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-cell">
+        <div class="callout-blue">
+          <h3 style="margin-top:0; color:#0f2d4a;">Nigella Sativa 10% Extract (Targeted Acute Intervention)</h3>
+          <ul style="font-size:7pt; margin-bottom:0; padding-left:11px;">
+            <li><strong>Yield:</strong> 20 mg Active Thymoquinone per 200 mg serving.</li>
+            <li><strong>Gastric Tolerability:</strong> Moderate to Low; highly concentrated volatile terpenes can cause reflux on empty stomachs.</li>
+            <li><strong>Subjective Tone:</strong> Pronounced physical heaviness and deep sedation in sensitive individuals.</li>
+            <li><strong>Application:</strong> Acute joint and inflammatory flare management or pre-bed targeted sedation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page-container">
+    <h2>4. Extended Spectrum of Clinical & Physiological Benefits</h2>
+    <p>
+      Nigella Sativa 5% extract provides wide-ranging therapeutic benefits across multiple physiological domains:
+    </p>
+
+    <div class="two-col-table">
+      <div class="col-cell">
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">1. Cognitive Clarity & Synaptic Plasticity</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Hippocampal Memory Consolidation:</strong> By reversibly blocking <span class="math">\text{AChE}</span>, it elevates synaptic acetylcholine, activating <span class="math">\alpha7\text{ nAChR}</span> to facilitate Long-Term Potentiation (<span class="math">\text{LTP}</span>) and memory consolidation. Provides clear, sustained alertness without catecholamine jitters or autonomic hyper-arousal.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">2. Anxiolysis & The "Zen-Focus" State</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Neurochemical Balance:</strong> Typical synthetic <span class="math">\text{AChE}</span> inhibitors risk inducing physical tension and muscle twitching. Nigella Sativa’s simultaneous <span class="math">\text{GABA}_\text{A}\text{ PAM}</span> activity provides an inhibitory neurochemical buffer, resulting in clear mental focus paired with profound somatic relaxation.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">3. Systemic Joint Ease & Connective Tissue Recovery</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Dual COX/LOX Pathway Inhibition:</strong> Downregulates <span class="math">\text{COX-2}</span>, <span class="math">\text{5-LOX}</span>, and <span class="math">\text{NLRP3}</span> inflammasome assembly, clearing inflammatory cytokines (<span class="math">\text{TNF-}\alpha}</span>, <span class="math">\text{IL-1}\beta</span>) from overtrained joints and tendons without causing NSAID-induced gastric erosion.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-cell">
+        <div class="callout-teal">
+          <h3 style="margin-top:0; color:#0f2d4a;">4. Sleep Architecture & REM Dream Dynamics</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Dual-Phase Sleep Restoration:</strong> Acetylcholine drives REM sleep (cognitive restructuring, high-definition dream recall), while GABAergic tone and systemic temperature reduction protect Stage 3/4 slow-wave deep sleep for physical repair and glymphatic clearance.
+          </p>
+        </div>
+        <div class="callout-teal">
+          <h3 style="margin-top:0; color:#0f2d4a;">5. Respiratory Kinetics & Histamine Stabilization</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Bronchodilation via Nigellone:</strong> Relaxes tracheal smooth muscle and halts calcium-mediated mast cell degranulation, providing rapid relief from sinus congestion, allergic rhinitis, and exercise-induced airway constriction.
+          </p>
+        </div>
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">6. Metabolic Partitioning & Gut-Barrier Integrity</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Epithelial Seal & Glucose Uptake:</strong> Upregulates tight junction proteins (<span class="math">\text{ZO-1}</span>, Occludin) against endotoxin (<span class="math">\text{LPS}</span>) leakage, while <span class="math">\text{AMPK}</span> activation drives <span class="math">\text{GLUT4}</span> translocation into skeletal muscle.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>5. Sleep Architecture Dynamics: The Cholinergic-GABAergic Balance</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">Sleep Phase</th>
+          <th style="width: 35%;">Neurochemical & Physiological Driver</th>
+          <th style="width: 40%;">Nigella Sativa 5% Modulatory Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>REM Sleep<br>(Neural Regeneration)</strong></td>
+          <td>Driven by <strong>Acetylcholine</strong> signaling in the pontine tegmentum; high cortical voltage, memory indexing, emotional schema reset.</td>
+          <td><span class="math">\text{AChE}</span> inhibition prolongs REM episodes, intensifies narrative dream structure, and enhances lucid dream induction without micro-awakenings.</td>
+        </tr>
+        <tr>
+          <td><strong>Slow-Wave Deep Sleep<br>(Hardware Repair)</strong></td>
+          <td>Driven by <strong>GABAergic</strong> dominance, delta waves (<span class="math">0.5\text{--}4.0\text{ Hz}</span>), Growth Hormone (<span class="math">\text{GH}</span>) secretion, and core body cooling.</td>
+          <td><span class="math">\text{GABA}_\text{A}\text{ PAM}</span> action shields Stage 3 deep sleep from cholinergic fragmentation, ensuring glymphatic clearance and tissue ECM repair.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. Pharmacokinetics, Bioavailability & Metabolic Kinetics</h2>
+    <div class="two-col-table">
+      <div class="col-cell">
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">Absorption & Bioavailability Dynamics</h3>
+          <ul style="font-size:7pt; margin-bottom:0; padding-left:11px;">
+            <li><strong>Lipophilicity:</strong> Thymoquinone and auxiliary terpenes are strongly lipophilic.</li>
+            <li><strong>Peak Plasma Concentration (<span class="math">T_{\max}</span>):</strong> Reached between <strong>1.5 to 2.5 hours</strong> post-ingestion.</li>
+            <li><strong>Biological Half-Life (<span class="math">t_{1/2}</span>):</strong> Estimated between <strong>3.5 to 5.5 hours</strong>, providing consistent daytime coverage.</li>
+            <li><strong>Dietary Pairing:</strong> Ingesting alongside dietary lipids (whole eggs, tallow, olive oil) enhances micellar formation and intestinal absorption.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-cell">
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">Hepatic Enzymes & Metabolic Clearance</h3>
+          <ul style="font-size:7pt; margin-bottom:0; padding-left:11px;">
+            <li><strong>CYP450 Modulation:</strong> Exhibits mild reversible inhibition on hepatic <span class="math">\text{CYP3A4}</span> and <span class="math">\text{CYP2C9}</span> enzymes.</li>
+            <li><strong>Phase II Conjugation:</strong> Primary elimination occurs via glucuronidation and glutathione conjugation in hepatocytes.</li>
+            <li><strong>Renal & Biliary Output:</strong> Metabolites are cleared steadily without nephrotoxic accumulation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <div class="page-container">
+    <h2>7. Real-World Community Consensus & User Anecdotes (r/NootropicsDepot)</h2>
+    <p>
+      Analysis of extensive subjective user data across the <em>r/NootropicsDepot</em> and biohacking communities highlights several consistent physiological themes:
+    </p>
+
+    <div class="two-col-table">
+      <div class="col-cell">
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">1. The "Sympathetic Reset" & Tremor Relief</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Abolition of Somatic Tension:</strong> Users prone to physical manifestations of stress—such as hand tremors, involuntary eyelid twitching, jaw clenching, and shallow breathing—report complete resolution within 45 to 60 minutes of oral administration.
+          </p>
+          <p style="font-size:7pt; margin-bottom:0;">
+            <strong>Biometric Validation:</strong> Bio-tracker data (Whoop, Oura) frequently reveals a 10 to 15 bpm drop in resting heart rate and a marked reduction in acute adrenaline spikes during high-stress situations.
+          </p>
+        </div>
+        <div class="callout-blue">
+          <h3 style="margin-top:0; color:#0f2d4a;">2. High-Definition Lucid REM & Sleep Quality</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>REM Duration Expansion:</strong> Sleep tracking consistently logs a 20- to 40-minute increase in nightly REM sleep when taken with an evening meal.
+          </p>
+          <p style="font-size:7pt; margin-bottom:0;">
+            <strong>Cinematic Recall:</strong> Users describe dreams transitioning from chaotic fragments into structured, vivid narratives with crisp recall upon waking, without morning grogginess.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">3. The "Anti-Ruminative" Flow State</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Quieting Mental Chatter:</strong> Biohackers highlight an immediate dampening of looping, anxious thoughts and mental friction. Enables deep analytical work and easy verbal fluency without the emotional blunting typical of prescription anxiolytics.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-cell">
+        <div class="card">
+          <h3 style="margin-top:0; color:#0f2d4a;">4. Joint Stiffness & Accelerated DOMS Clearance</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Structural Recovery:</strong> Strength athletes report that persistent morning knee stiffness, tendon creakiness, and severe delayed-onset muscle soreness (DOMS) resolve significantly faster with daily 200 mg dosing.
+          </p>
+          <p style="font-size:7pt; margin-bottom:0;">
+            <strong>NSAID Alternative:</strong> Regularly used as a replacement for ibuprofen and other NSAIDs, avoiding gastric mucosal irritation.
+          </p>
+        </div>
+        <div class="callout-teal">
+          <h3 style="margin-top:0; color:#0f2d4a;">5. Respiratory Decongestion & Histamine Shield</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Allergy Defense:</strong> Users with seasonal pollen allergies report clear nasal airways and decreased eye irritation within 60 minutes.
+          </p>
+          <p style="font-size:7pt; margin-bottom:0;">
+            <strong>Postprandial Flushing:</strong> Those with dietary histamine sensitivities note reduced facial flushing and sinus pressure after meals.
+          </p>
+        </div>
+        <div class="callout-gold">
+          <h3 style="margin-top:0; color:#0f2d4a;">6. Administration Route Insights (Oral vs. Sublingual)</h3>
+          <p style="font-size:7pt; margin-bottom:1.5px;">
+            <strong>Oral Route (Recommended):</strong> Ingesting the 200 mg capsule with food provides a smooth, sustained 5- to 6-hour plateau of calm focus and anti-inflammatory support.
+          </p>
+          <p style="font-size:7pt; margin-bottom:0;">
+            <strong>Sublingual Caution:</strong> Micro-dosing raw powder under the tongue produces rapid anxiolysis, but community reports warn that volatile terpenes can cause temporary stinging and tongue soreness.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>8. Master Usage Guidelines & Safety Reference</h2>
+    <div class="callout-blue">
+      <h3 style="margin-top:0; color:#0f2d4a;">Master Protocol Quick-Reference Rules</h3>
+      <ul style="font-size:6.9pt; margin-bottom:0; padding-left:10px;">
+        <li><strong>Standard Daily Dosage:</strong> 200 mg once daily (providing 10 mg verified Thymoquinone). In acute inflammatory or allergy flare states, this may be divided into 200 mg twice daily.</li>
+        <li><strong>Dietary Administration:</strong> Always ingest alongside whole dietary lipids (whole eggs, grass-fed tallow, butter, olive oil) to stimulate biliary micellar transport and optimize bioavailability.</li>
+        <li><strong>Dosing Timing:</strong> Morning dosing yields calm, sustained cognitive endurance; evening dosing prioritizes REM sleep expansion, vivid dream recall, and overnight muscular repair.</li>
+        <li><strong>Metabolic Safety:</strong> Due to mild reversible inhibition of hepatic <span class="math">\text{CYP3A4}</span> and <span class="math">\text{CYP2C9}</span>, individuals on prescription pharmaceuticals metabolized through these pathways should consult a qualified physician.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

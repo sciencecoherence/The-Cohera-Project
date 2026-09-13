@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circadian Bioenergetics & Metabolic Coherence Protocol</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent-bright: #79c0ff;
+      --text-main: #f0f6fc;
+      --text-body: #c9d1d9;
+      --text-heading: #ffffff;
+      --highlight: #2ea043;
+      --tag-bg: #1f242c;
+      --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-body);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      padding: 2.5rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-bright);
+      background: var(--tag-bg);
+      border: 1px solid var(--accent);
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+      color: var(--text-heading);
+    }
+
+    .lead {
+      color: var(--text-body);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+      color: var(--text-heading);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 1.1rem;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      border-left: 3px solid var(--highlight);
+      padding-left: 0.6rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.8rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--text-body);
+    }
+
+    td.code-col {
+      font-family: var(--font-mono);
+      color: var(--accent-bright);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    td.val-col {
+      font-family: var(--font-mono);
+      color: var(--highlight);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-bright);
+      font-size: 1rem;
+    }
+
+    strong {
+      color: var(--text-heading);
+      font-weight: 600;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .sub-panel {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+
+    .sub-panel-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin-bottom: 0.75rem;
+      display: block;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .highlight-panel {
+      background: rgba(88, 166, 255, 0.05);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 820px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 1.25rem 0.75rem;
+      }
+      th, td {
+        padding: 0.65rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Science Coherence // Protocol Audit</div>
+    <h1>Circadian Bioenergetics, Unheated Substrates & Living Hydration Architecture</h1>
+    <p class="lead">Early-shifted biphasic sleep, full-spectrum photobiology, raw marine/pasture fuel matrix, biological electrolyte hydration, somnogenic neuro-cooling, and alternating bi-weekly neuroplastic periodization.</p>
+  </header>
+
+  <!-- 1. Biophysical Objectives -->
+  <section>
+    <h2>Biophysical Objectives</h2>
+    <ul>
+      <li><strong>Circadian Phase Advance & Nocturnal Recovery:</strong> Daytime metabolic loading (10:00–16:00) paired with an early somnogenic vector (18:15) synchronizes deep non-REM restorative sleep with core thermal cooling and nocturnal growth hormone pulsatility.</li>
+      <li><strong>Native Macromolecular & Enzymatic Integrity:</strong> Sourcing 100% unheated proteins, living raw milk enzymes (phosphatase, lactoferrin, lysozyme), and active fruit proteases (bromelain, actinidin) eliminates advanced glycation end-products (AGEs) while maximizing gastrointestinal peptide cleavage.</li>
+      <li><strong>Living Structured Electrolyte Hydration:</strong> Exclusive hydration through isotonic raw coconut water (1 L/day) and bioavailable raw milk floods the intracellular space with native potassium, magnesium, and bioactive electrolytes, bypassing devitalized water filtration issues.</li>
+      <li><strong>Somnogenic Neuro-Cooling & GABAergic Induction:</strong> Exogenous glycine drives peripheral vasodilation to dump core body temperature, while Tauromag, Lemon Balm (GABA-T inhibition), Agmatine (NMDA modulation), and kiwi-derived indolamines induce deep sleep-spindle synchronization.</li>
+      <li><strong>Neuroplastic Reorganization:</strong> Targeted TrkB/BDNF pathway stimulation combined with bi-weekly 5-HT2A receptor agonism drives dendritic spine remodeling, synaptogenesis, and nervous system recalibration.</li>
+    </ul>
+  </section>
+
+  <!-- 2. Daily Circadian Chrono-Map -->
+  <section>
+    <h2>Chrono-Architecture & Daily Timeline</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Phase</th>
+          <th>Operational Parameters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code-col">19:00 – 05:00</td>
+          <td>Biphasic Sleep Architecture</td>
+          <td>Retire at 19:00. Mid-sleep waking window dedicated to parasympathetic stillness: focused meditation and restorative yoga. Rest phase concludes at 05:00.</td>
+        </tr>
+        <tr>
+          <td class="code-col">05:00 – 07:00</td>
+          <td>Early Waking & Baseline Flow</td>
+          <td>Initial waking window. Low-intensity domestic activity and baseline wakefulness tasks to facilitate the transition out of sleep architecture.</td>
+        </tr>
+        <tr>
+          <td class="code-col">07:00</td>
+          <td>Vasomotor & Methylxanthine Priming</td>
+          <td>Ingest strong <em>Ilex guayusa</em> infusion paired with <strong>5 mg Tadalafil</strong>. Sustained PDE5 inhibition activates microvascular perfusion and endothelial eNOS ahead of training.</td>
+        </tr>
+        <tr>
+          <td class="code-col">08:00 – 10:00</td>
+          <td>Photobiology & Bodyweight Output</td>
+          <td>Broad-spectrum solar exposure (UVB/UVA/NIR) coupled with calisthenics conditioning to stimulate mitochondrial biogenesis, peripheral perfusion, and systemic nitric oxide release. Hydrate with pure raw coconut water.</td>
+        </tr>
+        <tr>
+          <td class="code-col">10:00</td>
+          <td>Primary Substrate Refeed & Lipid Stack</td>
+          <td>Primary meal: raw marine/pasture fuel allocation, fresh raw milk, and fresh pineapple slices (bromelain enzyme vector) alongside the complete lipid-phase botanical stack.</td>
+        </tr>
+        <tr>
+          <td class="code-col">11:30</td>
+          <td>Hypertrophy / Resistance Stimulus</td>
+          <td>Heavy resistance training at gym facility according to the active microcycle split. Ongoing hydration with raw coconut water.</td>
+        </tr>
+        <tr>
+          <td class="code-col">16:00</td>
+          <td>Primary Feeding Cutoff</td>
+          <td>Heavy protein/lipid and raw milk digestion concludes, clearing gastrointestinal load prior to evening transition.</td>
+        </tr>
+        <tr>
+          <td class="code-col">18:15</td>
+          <td>Somnogenic Substrate & Neuro-Stack</td>
+          <td>Targeted pre-sleep substrate: <strong>220g Buffalo Greek Yogurt</strong>, <strong>3g Pure Glycine</strong>, and <strong>2–3 Kiwis</strong> paired with the Evening Neuro-Inhibitory Stack (Lemon Balm, Tauromag, Agmatine Sulfate).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. Biochemical & Phytochemical Matrix -->
+  <section>
+    <h2>Biochemical Modulation Stack</h2>
+    <div class="grid-3">
+      <div class="sub-panel">
+        <span class="sub-panel-title">Morning Priming (07:00)</span>
+        <ul>
+          <li><strong><em>Ilex guayusa</em> Infusion:</strong> Slow-release methylxanthines, chlorogenic acid antioxidants, and theobromine-induced vasodilation.</li>
+          <li><strong>Tadalafil (5 mg):</strong> Sustained PDE5 inhibition, enhancing capillary perfusion, eNOS activity, and systemic oxygenation.</li>
+        </ul>
+      </div>
+      <div class="sub-panel">
+        <span class="sub-panel-title">Lipid-Phase Stack (10:00 Meal)</span>
+        <ul>
+          <li><strong><em>Nigella sativa</em> (5% TQ):</strong> Nrf2 up-regulation and AMPK-mediated metabolic protection.</li>
+          <li><strong>Saffron Extract:</strong> Monoaminergic rebalancing and crocin/safranal neuroprotection.</li>
+          <li><strong><em>Polygala tenuifolia</em> Extract:</strong> TrkB receptor activation and central BDNF amplification.</li>
+          <li><strong>Boron Glycinate (6 mg):</strong> Free steroid modulation and anti-inflammatory signaling.</li>
+          <li><strong>Astaxanthin (12 mg):</strong> Trans-membrane singlet oxygen quencher; micellar lipid delivery.</li>
+        </ul>
+      </div>
+      <div class="sub-panel">
+        <span class="sub-panel-title">Evening Neuro-Stack (18:15)</span>
+        <ul>
+          <li><strong>Lemon Balm Extract (ND):</strong> GABA Transaminase (GABA-T) inhibition via rosmarinic acid, elevating synaptic GABA.</li>
+          <li><strong>Tauromag (Mg Acetyl Taurinate):</strong> Rapid BBB-crossing magnesium; targets neuronal hyperexcitability and NMDA stabilization.</li>
+          <li><strong>Agmatine Sulfate:</strong> Endogenous polyamine neuromodulator; blocks NMDA channels and regulates nitric oxide synthases.</li>
+          <li><strong>Pure Glycine (3 g):</strong> NMDAR glycine site co-agonist in the SCN; triggers cutaneous vasodilation to accelerate core cooling.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Weekly Fuel Basket -->
+  <section>
+    <h2>Weekly Substrate Input Architecture</h2>
+    <p style="margin-bottom: 1rem; font-size: 0.95rem;">Audited across all raw pasture, wild marine, raw dairy, whole fruit, and biological hydration inputs:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Input Source</th>
+          <th>Weekly Total</th>
+          <th>Daily Avg Mass / Volume</th>
+          <th>Key Biological Substrates</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code-col">Raw Whole Milk</td>
+          <td>8.0 Liters (~8,240 g)</td>
+          <td>~1.14 L / day</td>
+          <td>Living lactoferrin, bioavailable A2/A1 immunoglobulins, bioactive calcium, and spherical milk fat globules.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Pure Raw Coconut Water</td>
+          <td>7.0 Liters (~7,200 g)</td>
+          <td>1.0 L / day</td>
+          <td>Sole fluid hydration vector: isotonic plant cytoplasm, ultra-dense potassium, natural cytokinin signaling factors.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Pork Fat (Subcutaneous)</td>
+          <td>1,000 g</td>
+          <td>142.9 g</td>
+          <td>Stearic & oleic saturated/monounsaturated lipid backbone; clean kinetic ATP donor.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Beef Bone Marrow</td>
+          <td>10 medium bones (~450g tissue)</td>
+          <td>~64.3 g</td>
+          <td>Alkylglycerols, sphingolipids, intact collagen network, native stem-cell factors.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Lisa Fish Filet (Mullet)</td>
+          <td>1,000 g</td>
+          <td>142.9 g</td>
+          <td>Intact marine omega-3 (EPA/DHA), high selenium density, myofibrillar protein.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Bonito Filet (Skipjack)</td>
+          <td>1,000 g</td>
+          <td>142.9 g</td>
+          <td>Bioavailable carnosine, anserine, high-concentration niacin, and heme iron.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Fresh Octopus</td>
+          <td>1,000 g</td>
+          <td>142.9 g</td>
+          <td>Taurine (osmoregulation, bile flow), bioavailable copper, native collagen peptides.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Fresh Squid</td>
+          <td>1,000 g</td>
+          <td>142.9 g</td>
+          <td>Dense copper, phosphorus, riboflavin, and unoxidized marine sterols.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Giant Oysters</td>
+          <td>24 units (~800g meat)</td>
+          <td>~114.3 g</td>
+          <td>Exceptional zinc density, organic marine iodine, glycogen, and bioavailable iron.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Ground Beef (70/30)</td>
+          <td>2 lbs (907 g)</td>
+          <td>129.6 g</td>
+          <td>L-Carnitine, creatine, CoQ10, CLA, saturated/monounsaturated lipid baseline.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Fresh Whole Pineapple</td>
+          <td>1 whole (~1,000g edible)</td>
+          <td>~142.9 g</td>
+          <td>Natural bromelain protease complex (optimizes gastric raw peptide breakdown), manganese, vitamin C.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Buffalo Greek Yogurt</td>
+          <td>1,540 g</td>
+          <td>220.0 g</td>
+          <td>Slow-release A2-type buffalo casein, bioactive peptides, short-chain fats, calcium.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Fresh Kiwifruit</td>
+          <td>14–21 units (~1,330g)</td>
+          <td>~190.0 g (2–3 units)</td>
+          <td>Natural serotonin/melatonin precursors, actinidin protease, bioflavonoids, potassium.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Pure Glycine Powder</td>
+          <td>21 g</td>
+          <td>3.0 g</td>
+          <td>Direct inhibitory neurotransmission, core temperature dumping, collagen crosslinking.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 5. Full Macro & Micro Nutrient Audit -->
+  <section>
+    <h2>Comprehensive Macro & Micronutrient Audit</h2>
+    <p style="margin-bottom: 1.25rem; font-size: 0.95rem;">Rigorous nutritional quantification based on USDA/FoodData Central raw whole-food standards across the complete weekly and daily baseline:</p>
+
+    <!-- Macronutrients -->
+    <h3>1. Energy & Macronutrient Partitioning</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Macronutrient Parameter</th>
+          <th>Weekly Cumulative</th>
+          <th>Daily Average</th>
+          <th>Energy Partitioning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code-col">Total Caloric Energy</td>
+          <td class="val-col">~30,050 kcal</td>
+          <td class="val-col">~4,293 kcal/day</td>
+          <td>100% Comprehensive Baseline</td>
+        </tr>
+        <tr>
+          <td class="code-col">Crude Intact Protein + Free Amine</td>
+          <td class="val-col">~1,478 g</td>
+          <td class="val-col">~211.2 g/day</td>
+          <td>~20% Total Caloric Ratio</td>
+        </tr>
+        <tr>
+          <td class="code-col">Total Native Lipids (Fat)</td>
+          <td class="val-col">~2,195 g</td>
+          <td class="val-col">~313.6 g/day</td>
+          <td>~65% Total Caloric Ratio</td>
+        </tr>
+        <tr>
+          <td class="code-col">Carbohydrates, Lactose & Fruit Hexoses</td>
+          <td class="val-col">~1,178 g</td>
+          <td class="val-col">~168.3 g/day</td>
+          <td>~15% Total Caloric Ratio</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- B-Vitamins -->
+    <h3>2. B-Complex Vitamin Profile</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>B-Vitamin Compound</th>
+          <th>Weekly Total</th>
+          <th>Daily Average</th>
+          <th>Primary Natural Vectors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code-col">Vitamin B1 (Thiamine)</td>
+          <td class="val-col">~19.1 mg</td>
+          <td class="val-col">~2.73 mg</td>
+          <td>Raw milk, pork fat tissue, bonito, 70/30 beef, pineapple</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin B2 (Riboflavin)</td>
+          <td class="val-col">~43.0 mg</td>
+          <td class="val-col">~6.14 mg</td>
+          <td>Raw milk (dense), raw squid, buffalo yogurt, bonito, oysters</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin B3 (Niacin)</td>
+          <td class="val-col">~375.0 mg</td>
+          <td class="val-col">~53.6 mg</td>
+          <td>Bonito, Lisa fish, ground beef, squid, coconut water</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin B5 (Pantothenic Acid)</td>
+          <td class="val-col">~72.0 mg</td>
+          <td class="val-col">~10.29 mg</td>
+          <td>Raw milk, beef tissue, giant oysters, buffalo yogurt, octopus</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin B6 (Pyridoxine)</td>
+          <td class="val-col">~44.8 mg</td>
+          <td class="val-col">~6.40 mg</td>
+          <td>Bonito, Lisa fish, fresh kiwi, octopus, beef, raw milk</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin B9 (Folate)</td>
+          <td class="val-col">~2,540 mcg</td>
+          <td class="val-col">~362.9 mcg</td>
+          <td>Raw milk, kiwifruit, giant oysters, pineapple, coconut water</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin B12 (Cobalamin)</td>
+          <td class="val-col">~528.0 mcg</td>
+          <td class="val-col">~75.4 mcg</td>
+          <td>Octopus (massive), oysters, bonito, raw milk, buffalo yogurt</td>
+        </tr>
+        <tr>
+          <td class="code-col">Choline (Phosphatidylcholine)</td>
+          <td class="val-col">~7,200 mg</td>
+          <td class="val-col">~1,028.6 mg</td>
+          <td>Raw milk fat globule membrane (MFGM), bone marrow, beef, squid, seafood</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Minerals & Trace Elements -->
+    <h3>3. Essential Minerals & Trace Elements</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Mineral / Trace Element</th>
+          <th>Weekly Total</th>
+          <th>Daily Average</th>
+          <th>Biophysical Role & Target Equilibrium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code-col">Potassium (K)</td>
+          <td class="val-col">~55,000 mg</td>
+          <td class="val-col">~7,857 mg</td>
+          <td>Pure coconut water (massive biological supply), raw milk, octopus, kiwi</td>
+        </tr>
+        <tr>
+          <td class="code-col">Calcium (Ca)</td>
+          <td class="val-col">~16,550 mg</td>
+          <td class="val-col">~2,364 mg</td>
+          <td>Raw whole milk (abundant bioavailable ionic calcium), yogurt, marrow</td>
+        </tr>
+        <tr>
+          <td class="code-col">Magnesium (Mg)</td>
+          <td class="val-col">~3,740 mg</td>
+          <td class="val-col">~534.3 mg</td>
+          <td>Raw milk, coconut water, cephalopods, plus supplemental Tauromag</td>
+        </tr>
+        <tr>
+          <td class="code-col">Natural Sodium (Na)</td>
+          <td class="val-col">~13,600 mg</td>
+          <td class="val-col">~1,943 mg</td>
+          <td>Unwashed raw marine tissues, raw milk, coconut water</td>
+        </tr>
+        <tr>
+          <td class="code-col">Phosphorus (P)</td>
+          <td class="val-col">~23,300 mg</td>
+          <td class="val-col">~3,328 mg</td>
+          <td>Raw milk, squid, bonito, Lisa fish, bone marrow, yogurt</td>
+        </tr>
+        <tr>
+          <td class="code-col">Zinc (Zn)</td>
+          <td class="val-col">~882 mg</td>
+          <td class="val-col">~126.0 mg</td>
+          <td>Giant oysters (primary reservoir), ground beef, raw milk</td>
+        </tr>
+        <tr>
+          <td class="code-col">Copper (Cu)</td>
+          <td class="val-col">~68.7 mg</td>
+          <td class="val-col">~9.81 mg</td>
+          <td>Squid & octopus (perfect physiological counterbalance to high zinc)</td>
+        </tr>
+        <tr>
+          <td class="code-col">Heme Iron (Fe)</td>
+          <td class="val-col">~203.4 mg</td>
+          <td class="val-col">~29.0 mg</td>
+          <td>Octopus, giant oysters, bonito, 70/30 ground beef</td>
+        </tr>
+        <tr>
+          <td class="code-col">Selenium (Se)</td>
+          <td class="val-col">~3,155 mcg</td>
+          <td class="val-col">~450.7 mcg</td>
+          <td>Bonito, Lisa fish, octopus, squid, oysters (glutathione peroxidase driver)</td>
+        </tr>
+        <tr>
+          <td class="code-col">Organic Iodine (I)</td>
+          <td class="val-col">~1,450 mcg</td>
+          <td class="val-col">~207.1 mcg</td>
+          <td>Giant oysters, wild marine fish, raw milk, squid</td>
+        </tr>
+        <tr>
+          <td class="code-col">Manganese (Mn)</td>
+          <td class="val-col">~28.5 mg</td>
+          <td class="val-col">~4.07 mg</td>
+          <td>Fresh pineapple & coconut water (drives mitochondrial MnSOD antioxidant enzyme)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Specialized Bioactive Factors -->
+    <h3>4. Specialized Bioactive Factors, Enzymes & Somnogenic Molecules</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Bioactive Compound</th>
+          <th>Weekly Total</th>
+          <th>Daily Average</th>
+          <th>Functional Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code-col">Bromelain Protease Complex</td>
+          <td class="val-col">High (Native)</td>
+          <td class="val-col">Sustained</td>
+          <td>From fresh pineapple slices at 10:00 meal; cleaves tough marine and muscle proteins into bioactive peptides.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Living Dairy Enzymes & MFGM</td>
+          <td class="val-col">8.0 Liters</td>
+          <td class="val-col">~1.14 L</td>
+          <td>Unheated raw milk provides native lipase, lactoferrin, and Milk Fat Globule Membranes for immune/gut barrier integrity.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Vitamin C (Ascorbic Acid)</td>
+          <td class="val-col">~2,120 mg</td>
+          <td class="val-col">~302.7 mg</td>
+          <td>Kiwifruit & pineapple derived; cofactor for collagen hydroxylation & aqueous redox buffer.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Exogenous Free Glycine</td>
+          <td class="val-col">21.0 g</td>
+          <td class="val-col">3.0 g</td>
+          <td>Direct thermal dumping via cutaneous vasodilation; SCN phase stabilization.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Actinidin & Kiwi Serotonin</td>
+          <td class="val-col">High (Native)</td>
+          <td class="val-col">Sustained</td>
+          <td>Enhances evening casein cleavage; natural indolamine sleep-spindle driver.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Native Taurine</td>
+          <td class="val-col">~8,500 mg</td>
+          <td class="val-col">~1,214 mg</td>
+          <td>Mitochondrial matrix buffering & bile acid conjugation (octopus/squid).</td>
+        </tr>
+        <tr>
+          <td class="code-col">Intact Omega-3 (EPA/DHA)</td>
+          <td class="val-col">~45.0 g</td>
+          <td class="val-col">~6.43 g</td>
+          <td>Unoxidized long-chain PUFAs preserving cellular membrane fluidity.</td>
+        </tr>
+        <tr>
+          <td class="code-col">Alkylglycerols / Sphingolipids</td>
+          <td class="val-col">High (Native)</td>
+          <td class="val-col">Sustained</td>
+          <td>Bone marrow and raw milk fat derived; immune signaling and lipid raft integrity.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 6. Periodization Architecture -->
+  <section>
+    <h2>Microcycle & Periodization Dynamics</h2>
+    <div class="grid-2">
+      <div class="sub-panel">
+        <span class="sub-panel-title">Week 1: Mechanical Loading</span>
+        <ul>
+          <li><strong>Training Split:</strong> Monday, Wednesday, Friday (11:30 Gym Session).</li>
+          <li><strong>Focus:</strong> Primary structural tension, mechanical overload, and high neuromuscular recruitment.</li>
+          <li><strong>Neuro-Modulation:</strong> Purely endogenous baseline focus.</li>
+        </ul>
+      </div>
+      <div class="sub-panel">
+        <span class="sub-panel-title">Week 2: Plasticity & Alternation</span>
+        <ul>
+          <li><strong>Training Split:</strong> Tuesday, Thursday, Saturday (11:30 Gym Session).</li>
+          <li><strong>Focus:</strong> Metabolic conditioning, structural recovery, and adaptive resistance.</li>
+          <li><strong>Neuro-Modulation:</strong> Integrated Psilocybin protocol for 5-HT2A receptor agonism, dendritogenesis, and structural neuroplastic reorganization.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Dedicated Psilocybin Protocol -->
+  <section>
+    <h2>Week 2: Dedicated Psilocybin Neuro-Integration Architecture</h2>
+    <p style="margin-bottom: 1.25rem; font-size: 0.95rem;">A precision protocol designed to leverage acute 5-HT2A receptor agonism during the recovery and alternation microcycle, driving high cortical entropy, dendritic arborization, and synaptic remodeling within a clean metabolic baseline.</p>
+
+    <div class="grid-2">
+      <div class="sub-panel">
+        <span class="sub-panel-title">1. Pharmacodynamics & Target Mechanisms</span>
+        <ul>
+          <li><strong>5-HT2A Receptor Agonism:</strong> Psilocin binds cortical 5-HT2A receptors on layer V pyramidal neurons, transiently disintegrating the Default Mode Network (DMN) and increasing global functional connectivity.</li>
+          <li><strong>TrkB / BDNF Synergy:</strong> Direct synergy with <em>Polygala tenuifolia</em> (TrkB activation) and <em>Nigella sativa</em>, amplifying brain-derived neurotrophic factor to stabilize newly formed synaptic spines.</li>
+          <li><strong>Cerebral Perfusion:</strong> Morning <strong>Tadalafil (5 mg)</strong> maintains eNOS-driven microvascular capillary dilation, ensuring unimpeded cerebral blood flow and oxygen delivery throughout the neuroplastic cascade.</li>
+        </ul>
+      </div>
+
+      <div class="sub-panel">
+        <span class="sub-panel-title">2. Metabolic & Chrono Synchronization</span>
+        <ul>
+          <li><strong>Fasted Administration:</strong> Introduced within the established fasted window to prevent substrate competition, minimize peripheral 5-HT3 enteric activation, and maximize blood-brain barrier transport.</li>
+          <li><strong>Photobiological Alignment:</strong> Timed to interface directly with morning solar exposure (8:00–10:00 AM) and restorative movement, priming neural entrainment before substrate ingestion.</li>
+          <li><strong>Structural Lipid Re-feeding:</strong> Ingesting native DHA/EPA, raw milk MFGM, spherical cholesterol, and intact phosphatidylcholine (10:00 AM) immediately supplies raw structural building blocks for new neural membrane synthesis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight-panel">
+      <span class="sub-panel-title" style="color: var(--accent-bright); margin-bottom: 0.5rem;">Psilocybin Day Operational Flow (Week 2 Microcycle)</span>
+      <table>
+        <thead>
+          <tr>
+            <th>Time Window</th>
+            <th>Protocol Phase</th>
+            <th>Specific Operational Directives</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code-col">05:00 – 07:00</td>
+            <td>Awakening & Somatic Centering</td>
+            <td>Low-intensity domestic flow, autonomic regulation, transition out of biphasic sleep. Hydrate with raw coconut water.</td>
+          </tr>
+          <tr>
+            <td class="code-col">07:00</td>
+            <td>Synergistic Delivery & Vasomotor Priming</td>
+            <td>Ingest <em>Ilex guayusa</em> infusion + 5 mg Tadalafil alongside the calibrated psilocybin protocol. Methylxanthine-PDE5 synergy optimizes systemic and cerebral microvascular dilation.</td>
+          </tr>
+          <tr>
+            <td class="code-col">08:00 – 10:00</td>
+            <td>Neuro-Photonic Calibration</td>
+            <td>Broad-spectrum morning solar exposure (UVB/UVA/NIR) paired with open-focus somatic calisthenics or breath meditation to harness cortical plasticity in an unconstrained sensory state.</td>
+          </tr>
+          <tr>
+            <td class="code-col">10:00</td>
+            <td>Membrane Substrate Feeding</td>
+            <td>Open feeding window: raw unheated marine/pasture fuel allocation, raw milk, and pineapple (rich in native DHA, choline, spherical lipids, bromelain) paired with the complete lipid-phase botanical array (*Nigella*, Saffron, *Polygala*, Boron, Astaxanthin).</td>
+          </tr>
+          <tr>
+            <td class="code-col">11:30</td>
+            <td>Adaptive Neuro-Mechanical Output</td>
+            <td>Resistance session (Tuesday/Thursday/Saturday split) focusing on mind-muscle integration, high proprioceptive feedback, and structural neural drive. Ongoing coconut water hydration.</td>
+          </tr>
+          <tr>
+            <td class="code-col">18:15</td>
+            <td>Somnogenic Integration & Synaptic Rest</td>
+            <td>Ingest evening sleep snack (220g Buffalo yogurt, 3g Glycine, 2–3 Kiwis) + Evening Neuro-Stack to dampen cortical excitation and support overnight synaptic consolidation.</td>
+          </tr>
+          <tr>
+            <td class="code-col">19:00 – 05:00</td>
+            <td>Biphasic Sleep & Plastic Consolidation</td>
+            <td>Early sleep transition (19:00). Mid-sleep waking phase dedicated to introspective meditation to integrate newly formed neural pathways.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

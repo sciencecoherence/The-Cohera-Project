@@ -1,0 +1,13 @@
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(transmissions|notes|community)/([A-Za-z0-9-]+)/?$ community/post.php?slug=$2 [L,QSA]
+
+Redirect 301 /index.html /
+Redirect 301 /directory.html /directory.php
+Redirect 301 /transmissions/the-25-june-transmission.html /transmissions/the-25-june-transmission
+Redirect 301 /transmissions/the-sky-above-us-02july-2026.html /transmissions/the-sky-above-us-02july-2026
+Redirect 301 /transmissions/the-2-july-transmission.html /transmissions/the-2-july-transmission
+Redirect 301 /notes/the-ethos-of-being.html /notes/the-ethos-of-being
