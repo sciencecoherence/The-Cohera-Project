@@ -1,3 +1,6 @@
 [submodule "sciencecoherence.com"]
 	path = sciencecoherence.com
 	url = https://github.com/sciencecoherence/sciencecoherence.com.git
+[submodule "science-coherence-website"]
+	path = science-coherence-website
+	url = https://github.com/sciencecoherence/sciencecoherence-website.git
